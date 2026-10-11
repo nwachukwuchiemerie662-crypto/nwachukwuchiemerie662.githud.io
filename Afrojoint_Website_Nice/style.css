@@ -1,0 +1,58 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#e1b34f;--gold2:#ffd878;--cream:#f7efd9;--muted:#b7ad99;--black:#070604;--panel:rgba(18,15,10,.86)}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--black);color:var(--cream);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(225,179,79,.07),transparent 38%);z-index:-1}
+a{text-decoration:none;color:inherit}
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;overflow:hidden;background-image:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.72) 55%,#070604 100%),url('ebube.png');background-size:cover;background-position:center top}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 50%,rgba(0,0,0,.45));pointer-events:none}
+.nav{position:relative;z-index:3;width:min(1180px,100%);margin:auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:13px;font-weight:900;letter-spacing:2.5px;font-size:1rem}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:12px;border:1px solid rgba(225,179,79,.75);box-shadow:0 0 22px rgba(225,179,79,.16)}
+.contact-btn{padding:10px 21px;border:1px solid rgba(225,179,79,.75);border-radius:999px;color:var(--gold2);background:rgba(0,0,0,.22);backdrop-filter:blur(8px);transition:.25s}
+.contact-btn:hover{background:var(--gold);color:#120e06;transform:translateY(-2px)}
+.hero-content{position:relative;z-index:2;text-align:center;width:min(900px,100%);margin:auto;padding:70px 25px 90px}
+.hero-logo{width:148px;height:148px;object-fit:cover;border-radius:24px;border:2px solid var(--gold);box-shadow:0 0 0 8px rgba(225,179,79,.06),0 18px 60px rgba(0,0,0,.5);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px)}}
+.eyebrow{color:var(--gold2);font-size:.72rem;font-weight:900;letter-spacing:4px;margin:20px 0 10px}
+h1{font-size:clamp(3.1rem,9vw,7rem);line-height:.98;letter-spacing:-3px;margin:0 0 22px;text-shadow:0 10px 35px rgba(0,0,0,.55)}
+h1 span{color:var(--gold2)}
+.hero-text{max-width:650px;margin:0 auto 30px;color:#e0d6c1;font-size:1.08rem}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.gold-btn,.outline-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 27px;border-radius:999px;font-weight:900;transition:.25s}
+.gold-btn{background:linear-gradient(135deg,var(--gold2),#c9962e);color:#120e06;box-shadow:0 10px 30px rgba(225,179,79,.2)}
+.outline-btn{border:1px solid rgba(225,179,79,.7);background:rgba(0,0,0,.25);color:var(--cream)}
+.gold-btn:hover,.outline-btn:hover{transform:translateY(-3px)}
+.outline-btn:hover{background:rgba(225,179,79,.12)}
+.scroll-cue{margin-top:55px;font-size:.64rem;letter-spacing:3px;color:#c0b49c;opacity:.8}
+.scroll-cue span{display:block;color:var(--gold2);font-size:1.2rem;margin-top:3px}
+.section{width:min(1180px,100%);margin:auto;padding:95px 28px}
+.section-title{text-align:center;max-width:720px;margin:0 auto 48px}
+.section-title h2,.about h2,.contact h2{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.08;margin-bottom:14px}
+.section-title h2,.about h2,.contact h2{color:var(--gold2)}
+.section-title p:not(.eyebrow){color:var(--muted)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.food-card{position:relative;background:linear-gradient(145deg,rgba(27,22,15,.96),rgba(11,9,6,.96));border:1px solid #3d301a;border-radius:22px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.28);transition:.3s}
+.food-card:nth-child(4),.food-card:nth-child(5){grid-column:span 1}
+.food-card:hover{transform:translateY(-8px);border-color:#cfa64a;box-shadow:0 24px 55px rgba(0,0,0,.45),0 0 28px rgba(225,179,79,.08)}
+.food-card img{width:100%;height:225px;display:block;object-fit:cover;transition:.4s}
+.food-card:hover img{transform:scale(1.04)}
+.food-info{padding:22px}
+.food-tag{display:inline-block;font-size:.6rem;font-weight:900;letter-spacing:2px;color:#171006;background:var(--gold2);padding:5px 9px;border-radius:999px;margin-bottom:12px}
+.food-info h3{font-size:1.28rem;color:#f2d58f;margin-bottom:6px}
+.food-info p{color:#a99f8c}
+.about{width:100%;max-width:none;background:linear-gradient(90deg,#090705,#181208,#090705);border-top:1px solid #261e11;border-bottom:1px solid #261e11}
+.about-box{width:min(850px,100%);margin:auto;text-align:center}
+.about-box p:last-child{color:#b9af9d;font-size:1.06rem}
+.contact{text-align:center}
+.contact-card{position:relative;overflow:hidden;border:1px solid #49391d;background:linear-gradient(145deg,#17120b,#0e0b08);border-radius:28px;padding:62px 28px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.contact-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(225,179,79,.06);filter:blur(20px);top:-120px;right:-70px}
+.contact-details{display:flex;justify-content:center;gap:70px;flex-wrap:wrap;margin:30px 0 35px}
+.contact-details div{display:flex;flex-direction:column;gap:3px}
+.contact-details span{font-size:.65rem;letter-spacing:3px;color:#988b74}
+.contact-details strong{font-size:1.15rem;color:#f2e2bd}
+footer{border-top:1px solid #302512;text-align:center;padding:38px 20px;color:#8f8778;background:#050403}
+footer img{width:68px;height:68px;object-fit:cover;border-radius:14px;border:1px solid #d4aa4c;margin-bottom:12px}
+footer p{margin:3px 0}footer strong{color:#d8ae50}
+@media(max-width:900px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.nav{padding:15px 16px}.brand span{font-size:.82rem}.contact-btn{padding:8px 16px}.hero-content{padding:55px 18px 70px}.hero-logo{width:120px;height:120px}h1{letter-spacing:-2px}.section{padding:70px 18px}.menu-grid{grid-template-columns:1fr}.contact-details{gap:28px}.food-card img{height:210px}}
